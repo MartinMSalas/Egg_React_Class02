@@ -82,7 +82,7 @@ Si la calificación es menor a 70, muestra el mensaje "Lo siento, no aprobaste e
 Muestra el mensaje correspondiente en la consola.
 */
 function grade() {
-  var grade = prompt("Ingrese su calificación");
+  var grade = prompt("Ingrese su calificación 0 a 100");
   grade = Number(grade);
   if (grade >= 70) {
     alert("Felicidades, ¡aprobaste el examen!");
@@ -102,9 +102,6 @@ function priceCalculator() {
 function switchUse() {
   var number = parseInt(prompt("Ingrese un numero del 1 al 7"));
   calculateDayOfWeek(number)
-
-
-
 }
 function calculateDayOfWeek(number) {
   switch (number) {
@@ -181,4 +178,48 @@ function doWhileUse() {
     }
   } while (number > 0);
   alert(`La suma de los numeros ingresados es ${sum}`);
+  alert(`"la suma de los numeros ingresados es "`+sum)
+}
+function test(){
+  const persona={
+
+    name: "martin",
+    height: 180,
+    id: 31126055
+  }
+  let persona2={
+
+  }
+
+  persona2.name = 'Sole';
+  console.log(persona2)
+/*
+
+const name = "Angela"
+
+name = "Angelita"  
+
+*/
+  persona.name = "David"
+  persona.weight = 90
+  console.log(persona)
+  //alert(persona)
+  //alert(name)
+
+  const persona3={
+
+    name: "martin",
+    height: 180,
+    id: 31126055
+  }
+  //persona = persona3
+  //alert(persona === persona3 ? "Es verdadero": "Es Falso") 
+  console.log(persona)
+  let persona4 = {
+    year:"2023"
+  }
+  let persona5 = {
+    year:2023
+  }
+  alert(persona4.year === persona5.year ? "Es verdadero": "Es Falso") 
 }
