@@ -1,3 +1,4 @@
+import Usuario from '../classUsuario'
 // Espera a que el DOM esté cargado
 document.addEventListener("DOMContentLoaded", function () {
   // Obtén la referencia al elemento <p> con el id "mensaje"
@@ -181,6 +182,7 @@ function doWhileUse() {
   alert(`"la suma de los numeros ingresados es "`+sum)
 }
 function test(){
+  /* 
   const persona={
 
     name: "martin",
@@ -200,6 +202,7 @@ const name = "Angela"
 name = "Angelita"  
 
 */
+/* 
   persona.name = "David"
   persona.weight = 90
   console.log(persona)
@@ -221,5 +224,11 @@ name = "Angelita"
   let persona5 = {
     year:2023
   }
-  alert(persona4.year === persona5.year ? "Es verdadero": "Es Falso") 
+  alert(persona4.year === persona5.year ? "Es verdadero": "Es Falso")
+  */ 
+  
+  //const Usuario = require('../classUsuario');
+  let user = new Usuario("martin")
+  user._edad =99
+  console.log(user)
 }
