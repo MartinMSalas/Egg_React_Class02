@@ -1,4 +1,4 @@
-import Usuario from '../classUsuario'
+//ort Usuario from '../classUsuario'
 // Espera a que el DOM esté cargado
 document.addEventListener("DOMContentLoaded", function () {
   // Obtén la referencia al elemento <p> con el id "mensaje"
@@ -181,8 +181,17 @@ function doWhileUse() {
   alert(`La suma de los numeros ingresados es ${sum}`);
   alert(`"la suma de los numeros ingresados es "`+sum)
 }
+function createEggStudent(){
+  let student01 = new EggStudent("angela@gmail.com", 25, "angela")
+  let student02 = new EggStudent("m@ingenieriasalas.com.ar")
+  let student03 = new BackendStudent("asd@asd.com.ar")
+  console.log("Estoy en func createStudent")
+  student01.doCode(4)
+  student03.doDolarInvoice(5555)
+
+}
 function test(){
-  /* 
+ 
   const persona={
 
     name: "martin",
@@ -192,7 +201,7 @@ function test(){
   let persona2={
 
   }
-
+ /* 
   persona2.name = 'Sole';
   console.log(persona2)
 /*
@@ -231,4 +240,35 @@ name = "Angelita"
   let user = new Usuario("martin")
   user._edad =99
   console.log(user)
+
+  
+  
+}
+class EggStudent{
+
+  constructor (email, age=18, _name="martin"){
+    this.email = email
+    this.age = age
+    this._name = _name
+  }
+
+  doCode(number ){
+    let hourQuantity= 0
+    for (let index = 0; index < number; index++) {
+      console.log(`studying for ${index}  hour `)
+      hourQuantity++
+    }
+  }
+} 
+class BackendStudent extends EggStudent{
+
+  constructor(email, examenGrade=70){
+    super(email, 18, "martin")
+    this.examenGrade=examenGrade
+  }
+
+  doDolarInvoice(amountInDollars){
+
+    console.log(`Estoy cobrand ${amountInDollars} dolares`)
+  }
 }
